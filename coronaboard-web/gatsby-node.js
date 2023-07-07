@@ -1,6 +1,10 @@
+// const getDataSource = require("./src/data-loader")
+
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
-  const dataSource = { thirdSlideTitle: "예방 행동 수칙" }
+  // const dataSource = await getDataSource()
+
+  const dataSource = require("./src/data-loader")
 
   createPage({
     path: "/",
