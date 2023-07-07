@@ -17,11 +17,13 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
     "bootstrap": "^4.6.0",
+    "echarts": "^5.1.2",
     "gatsby": "^3.10.2",
     "gatsby-plugin-emotion": "^6.3.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
+    "react-google-charts": "^3.0.15",
     "react-select": "^4.3.1"
   },
   "devDependencies": {
