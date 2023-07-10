@@ -2,27 +2,27 @@ const axios = require("axios")
 const { subDays } = require("date-fns")
 const { format, utcToZonedTime } = require("date-fns-tz")
 const _ = require("lodash")
+const ApiClient = require("./api-client")
 
 const countryInfo = require("../../tools/downloaded/countryInfo.json")
-
 async function getDataSource() {
   const countryByCc = _.keyBy(countryInfo, "cc")
-  const globalStats = await generateGlobalStats()
+  const apiClient = new ApiClient()
+
+  const allGlobalStats = await apiClient.getAllGlobalStats()
+
+  const groupedByDate = _.groupBy(allGlobalStats, "date")
+
+  const globalStats = generateGlobalStats(groupedByDate)
 
   return {
+    lastUpdated: Date.now(), // 데이터를 만든 현재 시간 기록
     globalStats,
     countryByCc,
   }
 }
-
-async function generateGlobalStats() {
-  const apiClient = axios.create({
-    baseURL: "http://localhost:8080",
-  })
-
-  const response = await apiClient.get("global-stats")
-  const groupedByDate = _.groupBy(response.data.result, "date")
-
+function generateGlobalStats(groupedByDate) {
+  // const now = new Date();
   const now = new Date("2021-06-05")
   const timeZone = "Asia/Seoul"
   const today = format(utcToZonedTime(now, timeZone), "yyyy-MM-dd")

@@ -1,10 +1,8 @@
-// const getDataSource = require("./src/data-loader")
+const { getDataSource } = require("./src/data-loader")
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
-  // const dataSource = await getDataSource()
-
-  const dataSource = require("./src/data-loader")
+  const dataSource = await getDataSource()
 
   createPage({
     path: "/",

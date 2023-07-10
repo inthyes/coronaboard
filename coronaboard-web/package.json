@@ -17,6 +17,7 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
     "bootstrap": "^4.6.0",
+    "date-fns-tz": "^2.0.0",
     "echarts": "^5.1.2",
     "fs-extra": "^10.0.0",
     "gatsby": "^3.10.2",

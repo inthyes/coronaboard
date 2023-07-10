@@ -39,7 +39,7 @@ async function crawlAndUpdateDomestic(outputPath, apiClient) {
     newDomesticStat.basicStats;
 
   // global-stat API를 호출하여 크롤링된 값을 서버에 저장
-  await apiClient.upsertGloablStat({
+  await apiClient.upsertGloballStat({
     cc: "KR",
     date: crawledDate,
     confirmed,
