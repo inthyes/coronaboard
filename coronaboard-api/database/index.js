@@ -1,14 +1,12 @@
 const Sequelize = require("sequelize");
 
-//데이터베이스 연결 정보 설정
+// 데이터베이스 연결 정보 설정
 const config = {
-  host: process.CORONABOARD_MYSQL_HOST,
-  //  || "127.0.0.1",
+  host: process.env.CORONABOARD_MYSQL_HOST || "127.0.0.1",
   port: 3306,
   database: "coronaboard",
   user: "coronaboard_admin",
-  password: porcess.CORONABOARD_MYSQL_PASSWORD,
-  //  || "1234",
+  password: process.env.CORONABOARD_MYSQL_PASSWORD || "1234",
 };
 
 // 데이터베이스 연결 정보를 입력해 시퀄라이즈 인스턴스 생성
