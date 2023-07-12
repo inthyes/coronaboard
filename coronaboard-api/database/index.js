@@ -22,3 +22,4 @@ module.exports = {
   GlobalStat: require("./global-stat.model")(sequelize),
   KeyValue: require("./key-value.model")(sequelize),
 };
+l;
