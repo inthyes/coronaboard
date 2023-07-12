@@ -131,3 +131,4 @@ dist
 
 .credentials.json
 .accessToken.json
+coronaboard-web/static/generated/

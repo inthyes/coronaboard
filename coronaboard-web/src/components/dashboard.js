@@ -5,7 +5,7 @@ import { DashboardItem } from "./dashboard-item"
 
 export function Dashboard(props) {
   const { globalStats } = props
-  // console.log(globalStats)
+
   // 국가별 데이터의 각 필드별 합을 계산
   const {
     worldConfirmed,
