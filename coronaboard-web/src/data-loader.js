@@ -25,14 +25,14 @@ async function getDataSource() {
 
   const youtubeVideos = await getYouTubeVideosByKeyword("코로나 19")
 
-  const koreaTestChartData = generateKoreaTestChartData(allGlobalStats)
+  // const koreaTestChartData = generateKoreaTestChartData(allGlobalStats)
 
-  const { byAge, bySex } = await apiClient.getByAgeAndBySex()
+  // const { byAge, bySex } = await apiClient.getByAgeAndBySex()
 
-  Object.keys(globalChartDataByCc).forEach(cc => {
-    const genPath = path.join(process.cwd(), `static/generated/${cc}.json`)
-    fs.outputFileSync(genPath, JSON.stringify(globalChartDataByCc[cc]))
-  })
+  // Object.keys(globalChartDataByCc).forEach(cc => {
+  //   const genPath = path.join(process.cwd(), `static/generated/${cc}.json`)
+  //   fs.outputFileSync(genPath, JSON.stringify(globalChartDataByCc[cc]))
+  // })
 
   return {
     lastUpdated: Date.now(), // 데이터를 만든 현재 시간 기록
@@ -40,9 +40,9 @@ async function getDataSource() {
     countryByCc,
     notice: notice.filter(x => !x.hidden),
     youtubeVideos,
-    koreaTestChartData,
-    koreaBySexChartData: bySex,
-    koreaByAgeChartData: byAge,
+    // koreaTestChartData,
+    // koreaBySexChartData: bySex,
+    // koreaByAgeChartData: byAge,
   }
 }
 function generateGlobalStats(groupedByDate) {
@@ -165,17 +165,17 @@ function appendToChartData(chartData, countryData, date) {
   chartData.date.push(date)
 }
 
-function generateKoreaTestChartData(allGlobalStats) {
-  const krData = allGlobalStats.filter(x => x.cc === "KR")
+// function generateKoreaTestChartData(allGlobalStats) {
+//   const krData = allGlobalStats.filter(x => x.cc === "KR")
 
-  return {
-    date: krData.map(x => x.date),
-    confirmedRate: krData.map(x => x.confirmed / (x.confirmed + x.negative)),
-    confirmed: krData.map(x => x.confirmed),
-    negative: krData.map(x => x.negative),
-    testing: krData.map(x => x.testing),
-  }
-}
+//   return {
+//     date: krData.map(x => x.date),
+//     confirmedRate: krData.map(x => x.confirmed / (x.confirmed + x.negative)),
+//     confirmed: krData.map(x => x.confirmed),
+//     negative: krData.map(x => x.negative),
+//     testing: krData.map(x => x.testing),
+//   }
+// }
 
 module.exports = {
   getDataSource,

@@ -52,7 +52,7 @@ export default function SinglePage({ pageContext }) {
       <GlobalSlide id="global-slide" dataSource={dataSource} />
       <GlobalChartSlide id="global-chart-slide" dataSource={dataSource} />
       <YoutubeSlide id="youtube-slide" dataSource={dataSource} />
-      <KoreaChartSlide id="korea-chart-slide" dataSource={dataSource} />
+      {/* <KoreaChartSlide id="korea-chart-slide" dataSource={dataSource} /> */}
     </div>
   )
 }
