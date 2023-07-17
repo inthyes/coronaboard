@@ -1,20 +1,20 @@
-import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Button, ButtonGroup } from "react-bootstrap"
+import { Container, Button, ButtonGroup } from 'react-bootstrap';
 
 export default function ButtonPage() {
   return (
     <Container>
       <div>
-        <button varient="primary">Primary</button>
-        <button varient="secondary">secondary</button>
-        <button varient="success">success</button>
-        <button varient="danger">danger</button>
-        <button varient="warning">warning</button>
-        <button varient="info">info</button>
-        <button varient="light">light</button>
-        <button varient="dark">dark</button>
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">secondary</Button>
+        <Button variant="success">success</Button>
+        <Button variant="danger">danger</Button>
+        <Button variant="warning">warning</Button>
+        <Button variant="info">info</Button>
+        <Button variant="light">light</Button>
+        <Button variant="dark">dark</Button>
       </div>
       <hr />
 
@@ -23,5 +23,5 @@ export default function ButtonPage() {
         <Button variant="outline-primary">어제</Button>
       </ButtonGroup>
     </Container>
-  )
+  );
 }

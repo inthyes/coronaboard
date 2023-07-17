@@ -1,21 +1,21 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import React from "react"
-import { css } from "@emotion/react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { css } from '@emotion/react';
 
-import { Dashboard } from "../components/dashboard"
-import { Notice } from "../components/notice"
-import { GlobalSlide } from "../components/global-slide"
-import { GlobalChartSlide } from "../components/global-chart-slide"
-import { KoreaChartSlide } from "../components/korea-chart-slide"
-import { YoutubeSlide } from "../components/youtube-slide"
-import { Navigation } from "../components/navigation"
+import { Dashboard } from '../components/dashboard';
+import { Notice } from '../components/notice';
+import { GlobalSlide } from '../components/global-slide';
+import { GlobalChartSlide } from '../components/global-chart-slide';
+import { KoreaChartSlide } from '../components/korea-chart-slide';
+import { YoutubeSlide } from '../components/youtube-slide';
+import { Navigation } from '../components/navigation';
 
 export default function SinglePage({ pageContext }) {
   // pageContext를 통해 전달된 데이터를 추출해서 사용
-  const { dataSource } = pageContext
-  const { lastUpdated, globalStats, notice } = dataSource
+  const { dataSource } = pageContext;
+  const { lastUpdated, globalStats, notice } = dataSource;
 
-  const lastUpdatedFormatted = new Date(lastUpdated).toLocaleString()
+  const lastUpdatedFormatted = new Date(lastUpdated).toLocaleString();
 
   return (
     <div id="top">
@@ -54,5 +54,5 @@ export default function SinglePage({ pageContext }) {
       <YoutubeSlide id="youtube-slide" dataSource={dataSource} />
       {/* <KoreaChartSlide id="korea-chart-slide" dataSource={dataSource} /> */}
     </div>
-  )
+  );
 }

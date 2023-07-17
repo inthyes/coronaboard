@@ -1,19 +1,22 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
-import { Chart } from 'react-google-charts'; // 임포트
+import { Chart } from 'react-google-charts';
 
 export default function GoogleGeoChart() {
   const data = [
-    ['Country', 'Confirmed'],
-    ['United States', 29506328],
-    ['Brazil', 17513996],
-    ['France', 62663328],
-    ['Turkey', 53392811],
+    ['Country', 'Value'],
+    ['KR-11', 777],
+    ['KR-42', 666],
+    ['KR-38', 555],
+    ['KR-31', 444],
+    ['KR-43', 333],
+    ['KR-47', 222],
+    ['KR-39', 111],
   ];
 
   const options = {
-    colorAxis: { colors: ['skyblue', 'purple'] },
+    colorAxis: { colors: ['skyblue', 'green'] },
     region: 'KR',
     resolution: 'provinces',
   };
