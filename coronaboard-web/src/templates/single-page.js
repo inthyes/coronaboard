@@ -6,7 +6,7 @@ import { Dashboard } from '../components/dashboard';
 import { Notice } from '../components/notice';
 import { GlobalSlide } from '../components/global-slide';
 import { GlobalChartSlide } from '../components/global-chart-slide';
-import { KoreaChartSlide } from '../components/korea-chart-slide';
+// import { KoreaChartSlide } from '../components/korea-chart-slide';
 import { YoutubeSlide } from '../components/youtube-slide';
 import { Navigation } from '../components/navigation';
 
