@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 import { Dashboard } from '../components/dashboard';
 import { Notice } from '../components/V2-notice';
 import { GlobalSlide } from '../components/global-slide';
+import { GlobalChartSlide } from '../components/V2-global-chart-slide';
 
 export default function SecondPage({ pageContext }) {
   const { dataSource } = pageContext;
@@ -43,6 +44,7 @@ export default function SecondPage({ pageContext }) {
       {/* <Notice notice={} /> */}
       <Notice notice={notice} />
       <GlobalSlide id="global-slide" dataSource={dataSource} />
+      <GlobalChartSlide id="global-chart-slide" dataSource={dataSource} />
     </div>
   );
 }
